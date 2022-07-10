@@ -1,0 +1,3 @@
+#!/bin/sh
+IMAGE=ghcr.io/marcphilipp/texlive-nonfreefonts:sha-4145e16
+exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data "$IMAGE" "$@"
